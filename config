@@ -5,15 +5,29 @@
 # this file and re-run i3-config-wizard(1).
 #
 
-# i3 config file (v4)
-#
-# Please see http://i3wm.org/docs/userguide.html for a complete reference!
+# Constants
+  set $mod Mod4
 
-set $mod Mod4
+  set $base00 #101218
+  set $base01 #1f222d
+  set $base02 #252936
+  set $base03 #7780a1
+  set $base04 #C0C5CE
+  set $base05 #d1d4e0
+  set $base06 #C9CCDB
+  set $base07 #ffffff
+  set $base08 #ee829f
+  set $base09 #f99170
+  set $base0A #ffefcc
+  set $base0B #a5ffe1
+  set $base0C #97e0ff
+  set $base0D #97bbf7
+  set $base0E #c0b7f9
+  set $base0F #fcc09e
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:System San Francisco Display 10
+  font pango:System San Francisco Display 10
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -27,142 +41,142 @@ font pango:System San Francisco Display 10
 # font, it doesn’t scale on retina/hidpi displays.
 
 # Use Mouse+$mod to drag floating windows to their wanted position
-floating_modifier $mod
+  floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+  bindsym $mod+Return exec i3-sensible-terminal
 
 # kill focused window
-bindsym $mod+Shift+q kill
+  bindsym $mod+Shift+q kill
 
 # lock screen
-bindsym $mod+o exec i3lock
+  bindsym $mod+o exec i3lock
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run
+  bindsym $mod+d exec dmenu_run
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+i focus up
-bindsym $mod+l focus right
+  bindsym $mod+j focus left
+  bindsym $mod+k focus down
+  bindsym $mod+i focus up
+  bindsym $mod+l focus right
 
 # alternatively, you can use the cursor keys:
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
+  bindsym $mod+Left focus left
+  bindsym $mod+Down focus down
+  bindsym $mod+Up focus up
+  bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+i move up
-bindsym $mod+Shift+l move right
+  bindsym $mod+Shift+j move left
+  bindsym $mod+Shift+k move down
+  bindsym $mod+Shift+i move up
+  bindsym $mod+Shift+l move right
 
 # alternatively, you can use the cursor keys:
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
-bindsym $mod+Shift+Right move right
+  bindsym $mod+Shift+Left move left
+  bindsym $mod+Shift+Down move down
+  bindsym $mod+Shift+Up move up
+  bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+h split h
+  bindsym $mod+h split h
 
 # split in vertical orientation
-bindsym $mod+v split v
+  bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
-bindsym $mod+f fullscreen toggle
+  bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
-bindsym $mod+z layout tabbed
-bindsym $mod+e layout toggle split
+  bindsym $mod+s layout stacking
+  bindsym $mod+z layout tabbed
+  bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
+  bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+  bindsym $mod+space focus mode_toggle
 
 # focus the parent container
-bindsym $mod+q focus parent
+  bindsym $mod+q focus parent
 
 # focus the child container
 #bindsym $mod+d focus child
 
 
 # workspace variables
-set $ws1 "1: Chrome "
-set $ws2 "2: Terminal "
-set $ws3 "3: "
-set $ws4 "4: "
-set $ws5 "5: "
-set $ws6 "6: "
-set $ws7 "7: who even uses this???"
-set $ws8 "8: "
-set $ws9 "9: "
-set $ws10 "10: Music [&#xf001;]"
+  set $ws1 "1: Chrome "
+  set $ws2 "2: Terminal "
+  set $ws3 "3: "
+  set $ws4 "4: "
+  set $ws5 "5: "
+  set $ws6 "6: "
+  set $ws7 "7: who even uses this???"
+  set $ws8 "8: "
+  set $ws9 "9: "
+  set $ws10 "10: Music [&#xf001;]"
 
 # switch to workspace
-bindsym $mod+ampersand workspace $ws1
-bindsym $mod+eacute workspace $ws2
-bindsym $mod+quotedbl workspace $ws3
-bindsym $mod+apostrophe workspace $ws4
-bindsym $mod+parenleft workspace $ws5
-bindsym $mod+minus workspace $ws6
-bindsym $mod+egrave workspace $ws7
-bindsym $mod+underscore workspace $ws8
-bindsym $mod+ccedilla workspace $ws9
-bindsym $mod+agrave workspace $ws10
+  bindsym $mod+ampersand workspace $ws1
+  bindsym $mod+eacute workspace $ws2
+  bindsym $mod+quotedbl workspace $ws3
+  bindsym $mod+apostrophe workspace $ws4
+  bindsym $mod+parenleft workspace $ws5
+  bindsym $mod+minus workspace $ws6
+  bindsym $mod+egrave workspace $ws7
+  bindsym $mod+underscore workspace $ws8
+  bindsym $mod+ccedilla workspace $ws9
+  bindsym $mod+agrave workspace $ws10
 
 # Program Workspaces
   assign [class="chromium-browser"] $ws1
   assign [class="Spotify"] $ws10
 
 # move focused container to workspace
-bindsym $mod+Shift+ampersand move container to workspace $ws1
-bindsym $mod+Shift+eacute move container to workspace $ws2
-bindsym $mod+Shift+quotedbl move container to workspace $ws3
-bindsym $mod+Shift+apostrophe move container to workspace $ws4
-bindsym $mod+Shift+5 move container to workspace $ws5
-bindsym $mod+Shift+minus move container to workspace $ws6
-bindsym $mod+Shift+egrave move container to workspace $ws7
-bindsym $mod+Shift+underscore move container to workspace $ws8
-bindsym $mod+Shift+ccedilla move container to workspace $ws9
-bindsym $mod+Shift+agrave move container to workspace $ws10
+  bindsym $mod+Shift+ampersand move container to workspace $ws1
+  bindsym $mod+Shift+eacute move container to workspace $ws2
+  bindsym $mod+Shift+quotedbl move container to workspace $ws3
+  bindsym $mod+Shift+apostrophe move container to workspace $ws4
+  bindsym $mod+Shift+5 move container to workspace $ws5
+  bindsym $mod+Shift+minus move container to workspace $ws6
+  bindsym $mod+Shift+egrave move container to workspace $ws7
+  bindsym $mod+Shift+underscore move container to workspace $ws8
+  bindsym $mod+Shift+ccedilla move container to workspace $ws9
+  bindsym $mod+Shift+agrave move container to workspace $ws10
 
 # Pulse Audio controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+  bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
+  bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
+  bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
 
 # Sreen brightness controls
-bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
-bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
+  bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
+  bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
 
 # Touchpad controls
-bindsym XF86TouchpadToggle exec /some/path/toggletouchpad.sh # toggle touchpad
+  bindsym XF86TouchpadToggle exec /some/path/toggletouchpad.sh # toggle touchpad
 
 # Media player controls
-bindsym XF86AudioPlay exec playerctl play
-bindsym XF86AudioPause exec playerctl pause
-bindsym XF86AudioNext exec playerctl next
-bindsym XF86AudioPrev exec playerctl previous
+  bindsym XF86AudioPlay exec playerctl play
+  bindsym XF86AudioPause exec playerctl pause
+  bindsym XF86AudioNext exec playerctl next
+  bindsym XF86AudioPrev exec playerctl previous
 
 # reload the configuration file
-bindsym $mod+Shift+c reload
+  bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+r restart
+  bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+  bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
-mode "resize" {
+  mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
 
         # Pressing left will shrink the window’s width.
@@ -183,9 +197,16 @@ mode "resize" {
         # back to normal: Enter or Escape
         bindsym Return mode "default"
         bindsym Escape mode "default"
-}
+  }
 
-bindsym $mod+r mode "resize"
+  bindsym $mod+r mode "resize"
+
+# Widow Colours
+#                         border  background text    indicator
+  client.focused          $base01 $base01    $base07 $base0F
+  client.focused_inactive $base02 $base02    $base03 $base0F
+  client.unfocused        $base02 $base02    $base03 $base0F
+  client.urgent           $base02 $base08    $base00 $base0F
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
@@ -194,6 +215,6 @@ bar {
 }
 
 # startup programs
-exec_always --no-startup-id feh --bg-scale ~/Pictures/wallpaper.jpg
-exec_always redshift
-exec Spotify
+  exec_always --no-startup-id feh --bg-scale ~/Pictures/wallpaper.jpg
+  exec_always redshift
+  exec Spotify
