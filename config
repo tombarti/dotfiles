@@ -53,7 +53,7 @@
   bindsym $mod+o exec i3lock
 
 # start dmenu (a program launcher)
-  bindsym $mod+d exec dmenu_run
+  bindsym $mod+d exec rofi -show run -lines 3 -opacity "85"-eh 2 -width 100 -padding 500 -bw 0 -bg "#1f222d" -bc "#1f222d" -hlbg "#1f222d" -fg "$base05" -hlfg "#00a3cc" -font "System San Francisco Display 14"
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -120,7 +120,7 @@
   set $ws7 "7: who even uses this???"
   set $ws8 "8: "
   set $ws9 "9: "
-  set $ws10 "10: Music [&#xf001;]"
+  set $ws10 "10: Music"
 
 # switch to workspace
   bindsym $mod+ampersand workspace $ws1
@@ -136,7 +136,7 @@
 
 # Program Workspaces
   assign [class="chromium-browser"] $ws1
-  assign [class="Spotify"] $ws10
+  assign [class="spotify"] $ws10
 
 # move focused container to workspace
   bindsym $mod+Shift+ampersand move container to workspace $ws1
@@ -221,10 +221,11 @@
       active_workspace   $base01 $base02    $base03
       inactive_workspace $base01 $base01    $base03
       urgent_workspace   $base01 $base01    $base08
-    }    
+    }
 }
 
 # startup programs
   exec_always --no-startup-id feh --bg-scale ~/Pictures/wallpaper.jpg
   exec_always redshift
   exec Spotify
+  exec compton -f
