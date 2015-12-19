@@ -50,7 +50,7 @@
   bindsym $mod+Shift+q kill
 
 # lock screen
-  bindsym $mod+o exec i3lock
+  bindsym $mod+! exec i3lock
 
 # start dmenu (a program launcher)
   bindsym $mod+d exec rofi -show run -lines 3 -opacity "85"-eh 2 -width 100 -padding 500 -bw 0 -bg "#1f222d" -bc "#1f222d" -hlbg "#1f222d" -fg "$base05" -hlfg "#00a3cc" -font "System San Francisco Display 14"
@@ -109,6 +109,9 @@
 # focus the child container
 #bindsym $mod+d focus child
 
+#spotify controls (and vlc etc...)
+bindsym $mod+p exec playerctl play-pause
+bindsym $mod+o exec playerctl next
 
 # workspace variables
   set $ws1 "1: Chrome "
